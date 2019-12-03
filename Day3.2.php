@@ -5,7 +5,6 @@ $line1 = explode(",", $lines[0]);
 $line2 = explode(",", $lines[1]);
 $grid = array(array());
 $overlaps = array();
-
 $result1 = fill_array($grid, $line1, false);
 $result2 = fill_array($result1, $line2, true);
 unset($overlaps[0]);
