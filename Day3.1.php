@@ -8,7 +8,7 @@ $overlaps = array();
 $result1 = fill_array($grid, $line1, false);
 $result2 = fill_array($result1, $line2, true);
 unset($overlaps[0]);
-print_array(min($overlaps));
+echo min($overlaps);
 
 function fill_array($grid, $line, $special)
 {
@@ -85,19 +85,4 @@ function fill_array($grid, $line, $special)
     }
     return $grid;
 
-}
-
-foreach ($grid as $line) {
-    foreach ($line as $dot) {
-        echo $dot;
-        "<br>";
-    }
-    echo "<br>";
-}
-
-function print_array($array)
-{
-    echo "<pre>";
-    print_r($array);
-    echo "</pre>";
 }
