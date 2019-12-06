@@ -34,22 +34,19 @@ function getResult($numbers)
             $parameter_1 = $array_of_numbers[2];
             $opcode = $array_of_numbers[3] . $array_of_numbers[4];
         }
-        if($parameter_1 == 1){
+        if ($parameter_1 == 1) {
             $para1 = $pointer + 1;
-        }
-        else{
+        } else {
             $para1 = $numbers[$pointer + 1];
         }
-        if($parameter_2 == 1){
+        if ($parameter_2 == 1) {
             $para2 = $pointer + 2;
-        }
-        else{
+        } else {
             $para2 = $numbers[$pointer + 2];
         }
-        if($parameter_3 == 1){
+        if ($parameter_3 == 1) {
             $para3 = $pointer + 3;
-        }
-        else{
+        } else {
             $para3 = $numbers[$pointer + 3];
         }
         switch ($opcode) {
@@ -68,7 +65,16 @@ function getResult($numbers)
                 $pointer -= 2;
                 break;
             case 5:
-                echo "hi";
+                echo "hi5";
+                break;
+            case 6:
+                echo "hi6";
+                break;
+            case 7:
+                echo "hi7";
+                break;
+            case 8:
+                echo "hi8";
                 break;
             case 99:
                 $breakloop = true;

@@ -67,10 +67,6 @@ function getResult($numbers)
                 echo $numbers[$numbers[$pointer + 1]] . "<br>";
                 $pointer -= 2;
                 break;
-            case 5:
-                if($parameter_1 != 0){
-                    $pointer = $numbers[$pointer -= 2];
-                }
             case 99:
                 $breakloop = true;
                 break;
