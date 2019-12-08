@@ -1,7 +1,7 @@
 <style>
     div{
-        height: 10px;
-        width: 10px;
+        height: 20px;
+        width: 20px;
         margin: 0;
     }
     .white{
@@ -23,8 +23,7 @@ $complete_array = str_split(file_get_contents("Day8.txt"), 25 * 6);
 
 $current_row = str_split($complete_array[0],1);
 foreach($complete_array as $row){
-    $row = str_split($row, 1);
-    foreach($row as $key => $number){
+    foreach(str_split($row, 1) as $key => $number){
         if($current_row[$key] >= 2){
             $current_row[$key] = $number;
         }
@@ -35,10 +34,10 @@ foreach($current_row as $key => $number){
         echo "<div class='breaker'></div>";
     }
     if($number == 1){
-        echo "<div class='white'></div>";
+        echo "<div class='black'></div>";
     }
     if($number == 0){
-        echo "<div class='black'></div>";
+        echo "<div class='white'></div>";
     }
 }
 ?>
